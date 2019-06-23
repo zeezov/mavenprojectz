@@ -24,6 +24,12 @@
     <dependencies>
 
         <dependency>
+            <groupId>com.codeborne</groupId>
+            <artifactId>pdf-test</artifactId>
+            <version>1.4</version>
+        </dependency>
+
+        <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>6.14.3</version>

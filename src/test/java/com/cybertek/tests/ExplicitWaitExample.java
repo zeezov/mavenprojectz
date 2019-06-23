@@ -30,6 +30,8 @@ public class ExplicitWaitExample {
         // we are waiting for certain element this xpath to be clickable
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@type='text']")));
 
+
+
         // enter text
         Driver.getDriver().findElement(By.xpath("//input[@type='text']")).sendKeys("Hello World");
 

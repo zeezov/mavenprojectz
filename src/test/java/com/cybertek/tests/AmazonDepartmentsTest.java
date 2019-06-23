@@ -14,6 +14,7 @@ package com.cybertek.tests;
 9.verify that all departments names are listed in the dropdown from step 4
  */
 
+import com.cybertek.utilities.TestBase;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -29,7 +30,7 @@ import org.testng.annotations.Test;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class AmazonDepartmentsTest {
+public class AmazonDepartmentsTest extends TestBase {
 
     WebDriver driver;
     Select allDepartments;

@@ -2,6 +2,7 @@ package com.cybertek.tests;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
@@ -22,6 +23,9 @@ public class TabsExample {
         driver = new ChromeDriver();
 
         driver.get("http://the-internet.herokuapp.com/windows");
+
+        driver.manage().window();
+
     }
 
     @AfterMethod
@@ -60,7 +64,7 @@ public class TabsExample {
         Set<String> windowHandles = driver.getWindowHandles();
 
         for(String handle : windowHandles) {
-            System.out.println(handle);
+            System.out.println("==> " + handle);
 
             driver.switchTo().window(handle);
             System.out.println(driver.getTitle());
@@ -105,8 +109,6 @@ public class TabsExample {
         Assert.assertTrue(driver.getCurrentUrl().contains("default"));
 
     }
-
-
 
 
 }
